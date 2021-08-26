@@ -10,14 +10,20 @@ struct node
 int main()
 {
     struct node* head=NULL;
-    head = (struct node*)malloc(sizeof(struct node*));
+    head = (struct node*)malloc(sizeof(struct node));
     head->data=50;
     head->link=NULL;
     // creating second node
-    struct node* current = (struct node *)malloc(sizeof(struct node*));
-    current->data=100;
-    current->link=NULL;
+    struct node* nextNode = (struct node *)malloc(sizeof(struct node));
+    nextNode->data=100;
+    nextNode->link=NULL;
     //connect the first node to this
-    head->link=current;
+    head->link=nextNode;
+
+    nextNode = (struct node*)malloc(sizeof(struct node));
+    nextNode->data=150;
+    nextNode->link = NULL;
+    head->link->link= nextNode;
+
     return 0;
 }
