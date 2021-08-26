@@ -1,2 +1,1 @@
 # singleLinkedListInC
-Datastructures in C
